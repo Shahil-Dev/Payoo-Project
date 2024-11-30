@@ -7,8 +7,9 @@
     <!---using tailwind-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="lora">
     <header></header>
     <main>
         <div class="hero bg-base-200 min-h-screen">
@@ -18,21 +19,21 @@
       <form class="card-body">
         <div class="form-control">
           <label class="label">
-            <span class="label-text">Email</span>
+            <span class="label-text font-bold">Mobile Number <sup class="text-red-600">*</sup></span>
           </label>
-          <input type="email" placeholder="email" class="input input-bordered" required />
+          <input id="number" type="text" placeholder="Mobile Number" class="h-12 border-[3px] rounded-[32px] p-4"  />
         </div>
         <div class="form-control">
           <label class="label">
-            <span class="label-text">Password</span>
+            <span class="label-text font-bold ">Pin <sup class="text-red-600">*</sup></span>
           </label>
-          <input type="password" placeholder="password" class="input input-bordered" required />
+          <input id="pin"  type="password" placeholder="Pin" class="border-[3px] h-12 rounded-[32px] p-4"  />
           <label class="label">
             <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
           </label>
         </div>
         <div class="form-control mt-6">
-          <button class="btn btn-primary">Login</button>
+            <button id="button-click" class="btn btn-outline rounded-[32px] btn-info">Login</button>
         </div>
       </form>
     </div>
@@ -40,5 +41,9 @@
 </div>
     </main>
     <footer></footer>
+
+
+
+    <script src="index.js"></script>
 </body>
 </html>
