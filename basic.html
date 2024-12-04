@@ -1,11 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    welcome home
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="max-w-6xl mx-auto">
+      <div>
+        <div class="navbar">
+          <div class="flex-1">
+            <a href="./basic.html" class="text-xl"
+              ><img class="h-[50px] w-[50px]" src="images/payoo.png" alt=""
+            /></a>
+          </div>
+          <div class="flex">
+            <div class="pr-10">
+              <div class="">
+                <div class="">
+                  <div class="stat-title font-bold">Total Amount</div>
+                  <div id="total" class="stat-value">0</div>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-outline inline-flex btn-success">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="divider divider-accent"></div>
+    <main>
+      <div class="max-w-6xl mx-auto">
+        <div class="px-4 md:px-0">
+          <h1 class="font-bold text-[24px] tracking-tight">
+            🔥 Welcome to Payooo!
+          </h1>
+          <p class="leading-[26px]">
+            Enjoy easy and convenient financial services with us. Cashout charge
+            is low and
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="px-4 md:px-0 grid grid-cols-3 gap-4 lg:flex lg:gap-5 mt-5 lg:ml-12 md:mt-10"
+      >
+        <a href="">
+          <button h id="book" class="btn btn-outline hover:text-[15px] h-[90px]">
+            <div class="px-[20px] py-[10px]">
+              <i class="fa-solid fa-wallet"></i>
+              <h1>Add money</h1>
+            </div>
+          </button>
+        </a>
+        <button id="cash" class="btn btn-outline hover:text-[15px] h-[90px]">
+          <div class="px-[20px] py-[10px]">
+            <img
+              class="mx-auto hover:text-white"
+              src="https://img.icons8.com/external-bartama-outline-32-bartama-graphic/32/external-withdraw-finance-bartama-outline-32-bartama-graphic.png"
+            />
+            <h1>Cashout</h1>
+          </div>
+        </button>
+        <button class="btn btn-outline hover:text-[15px] h-[90px]">
+          <div class="px-[20px] py-[10px]">
+            <i class="fa-solid fa-money-bill-transfer w-[20px] h-[20px]"></i>
+            <h1>Transfer Money</h1>
+          </div>
+        </button>
+        <button class="btn btn-outline hover:text-[15px] h-[90px]">
+          <div class="px-[20px] py-[10px]">
+            <i class="fa-solid fa-money-bills w-[20px] h-[20px]"></i>
+            <h1>Get Bonus</h1>
+          </div>
+        </button>
+        <button class="btn btn-outline hover:text-[15px] h-[90px]">
+          <div class="px-[20px] py-[10px]">
+            <i class="fa-regular fa-money-bill-1 w-[20px] h-[20px]"></i>
+            <h1>Pay Bill</h1>
+          </div>
+        </button>
+        <button class="btn btn-outline hover:text-[15px] h-[90px]">
+          <div class="px-[20px] py-[10px]">
+            <i class="fa-solid fa-building-columns w-[20px] h-[20px]"></i>
+            <h1>Transactions</h1>
+          </div>
+        </button>
+      </div>
+      <div class="divider divider-accent"></div>
+
+      <div class="max-w-6xl mx-auto">
+        <div id="pro" class="hero ">
+          <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="text-center lg:text-left">
+              <h1 class="text-5xl font-bold">Add money now!</h1>
+              <div id="alert" class="hidden">
+                <div
+                  role="alert"
+                  class="alert alert-success flex transition-opacity duration-100"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 shrink-0 stroke-current"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>Congratulation!Your Cash is added</span>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Account Number</span>
+                  </label>
+                  <input
+                    id="accountNumber"
+                    type="text"
+                    placeholder="Account Number"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin Number</span>
+                  </label>
+                  <input
+                    id="pin"
+                    type="password"
+                    placeholder="Pin Number"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Amount</span>
+                  </label>
+                  <input
+                    id="taka"
+                    type="text"
+                    placeholder="amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="logedin" class="btn btn-primary">
+                    Add money
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+ <!---CashOut section-->
+
+      <div>
+        <div id="core" class="max-w-6xl mx-auto hidden">
+          <div class="hero ">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <div class="text-center lg:text-left">
+                <h1 class="text-5xl font-bold">Cashout now!</h1>
+                <div id="alert" class="hidden">
+                  <div
+                    role="alert"
+                    class="alert alert-success transition-opacity duration-100"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6 shrink-0 stroke-current"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    <span>Successful payment</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                 <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin Number</span>
+                    </label>
+                    <input
+                      id="cashOutPin"
+                      type="password"
+                      placeholder="Pin Number"
+                      class="input input-bordered"
+                      required
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Amount</span>
+                    </label>
+                    <input
+                      id="cashOutAmount"
+                      type="text"
+                      placeholder="amount"
+                      class="input input-bordered"
+                      required
+                    />
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="cashOutLogin" class="btn btn-primary">
+                      Add money
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+
+    <script src="./basic.js"></script>
+    <script src="./cash.js"></script>
+  </body>
 </html>

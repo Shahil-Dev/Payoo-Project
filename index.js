@@ -1,24 +1,3 @@
-
-// document.getElementById('button-click')
-// .addEventListener('click', function(e){
-//     console.log("it's work");
-//     e.preventDefault()
-//     console.log();
-    
-//     const numberValue = document.getElementById('number').value
-//     const pinNumber = document.getElementById('pin').value
-//     console.log(numberValue , pinNumber);
-//     if(numberValue === '5' && pinNumber === 'ttt'){
-//      console.log('wellDone');
-//      window.location.href = './basic.html'
-//      }
-//      else{
-//         alert('give correct one')
-//      }
-     
-// }) 
-
-
 document.getElementById('button-click')
         .addEventListener('click', function(e){
             e.preventDefault()
@@ -26,7 +5,7 @@ document.getElementById('button-click')
             const numberValue  = document.getElementById('number').value
             const pinNumber    = document.getElementById('pin').value
             console.log(numberValue , pinNumber);
-            if(numberValue === '12345' && pinNumber =='pin'){
+            if(numberValue === '12345' && pinNumber =='111'){
                 console.log("it's okk");
                 window.location.href = './basic.html'
             }
